@@ -22,14 +22,14 @@ class Process(db.Model):
     id_P = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.Text())
     #key = 
-    A_id = db.Column(db.Integer, db.ForeignKey('article.id'))
+    A_id = db.Column(db.Integer, db.ForeignKey('Article.id'))
     article = db.relationship('Article',
                               backref=db.backref('comments', cascade='all, delete-orphan', lazy='dynamic'))
 
 class Inspire(db.Model):
     id_I = db.Column(db.Integer, primary_key=True)
     #key = 
-    A_id = db.Column(db.Integer, db.ForeignKey('article.id'))
+    A_id = db.Column(db.Integer, db.ForeignKey('Article.id'))
     article = db.relationship('Article',
                               backref=db.backref('comments', cascade='all, delete-orphan', lazy='dynamic'))
 

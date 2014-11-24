@@ -12,7 +12,7 @@ from apps.models import (
 	Comment
 )
 
-
+"""
 #
 # @index & article list
 #
@@ -147,3 +147,4 @@ def page_not_found(e):
 def server_error(e):
 	return render_template('500.html'), 500
 
+"""
